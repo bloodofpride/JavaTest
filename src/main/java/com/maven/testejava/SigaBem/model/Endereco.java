@@ -1,26 +1,15 @@
 package com.maven.testejava.SigaBem.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 public class Endereco {
 
     public String cep;
     public String logradouro;
-
     public String complemento;
-
     public String bairro;
-
     public String localidade;
-
     public String uf;
-
     public String ibge;
-
     public String gia;
-
     public String ddd;
 
     public String getCep() {

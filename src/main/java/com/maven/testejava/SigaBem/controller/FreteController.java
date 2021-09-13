@@ -2,7 +2,6 @@ package com.maven.testejava.SigaBem.controller;
 
 import com.maven.testejava.SigaBem.model.ConsultaFrete;
 import com.maven.testejava.SigaBem.model.Endereco;
-import com.maven.testejava.SigaBem.model.Frete;
 import com.maven.testejava.SigaBem.repository.ConsultaFreteIRepository;
 import com.maven.testejava.SigaBem.service.EnderecoService;
 import com.maven.testejava.SigaBem.viewmodels.CalcularFreteViewModel;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.*;
 
 

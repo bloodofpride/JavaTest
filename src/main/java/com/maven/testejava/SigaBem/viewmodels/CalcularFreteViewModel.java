@@ -2,7 +2,6 @@ package com.maven.testejava.SigaBem.viewmodels;
 
 import java.util.Date;
 
-
 public class CalcularFreteViewModel {
     public double vlTotalFrete;
 
