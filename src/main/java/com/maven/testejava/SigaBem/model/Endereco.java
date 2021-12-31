@@ -2,15 +2,15 @@ package com.maven.testejava.SigaBem.model;
 
 public class Endereco {
 
-    public String cep;
-    public String logradouro;
-    public String complemento;
-    public String bairro;
-    public String localidade;
-    public String uf;
-    public String ibge;
-    public String gia;
-    public String ddd;
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private String ibge;
+    private String gia;
+    private String ddd;
 
     public String getCep() {
         return cep;

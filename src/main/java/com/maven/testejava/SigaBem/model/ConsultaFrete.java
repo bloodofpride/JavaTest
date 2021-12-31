@@ -6,21 +6,30 @@ import java.util.Date;
 @Entity(name = "consulta")
 public class ConsultaFrete{
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    private Long id;
     @Column(nullable = false)
-    public double peso;
+    private double peso;
     @Column(nullable = false, length = 8)
-    public String cepOrigem;
+    private String cepOrigem;
     @Column(nullable = false, length = 8)
-    public String cepDestino;
+    private String cepDestino;
     @Column(nullable = false)
-    public String nomeDestinatario;
+    private String nomeDestinatario;
     @Column(nullable = false)
-    public double vlTotalFrete;
+    private double vlTotalFrete;
     @Column(nullable = false)
-    public Date dataPrevistaEntrega;
+    private Date dataPrevistaEntrega;
     @Column(nullable = false)
-    public Date dataConsulta;
+    private Date dataConsulta;
+
+    public ConsultaFrete(double peso, String cepOrigem, String cepDestino, String nomeDestinatario, double vlTotalFrete,Date dataConsulta) {
+        this.peso = peso;
+        this.cepOrigem = cepOrigem;
+        this.cepDestino = cepDestino;
+        this.nomeDestinatario = nomeDestinatario;
+        this.vlTotalFrete = vlTotalFrete;
+        this.dataConsulta = dataConsulta;
+    }
 
     public Long getId() {
         return id;
@@ -85,4 +94,6 @@ public class ConsultaFrete{
     public void setDataConsulta(Date dataConsulta) {
         this.dataConsulta = dataConsulta;
     }
+
+
 }
