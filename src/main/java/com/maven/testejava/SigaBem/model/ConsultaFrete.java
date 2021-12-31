@@ -1,10 +1,12 @@
 package com.maven.testejava.SigaBem.model;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity(name = "consulta")
 public class ConsultaFrete{
+
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(nullable = false)
@@ -22,7 +24,21 @@ public class ConsultaFrete{
     @Column(nullable = false)
     private Date dataConsulta;
 
-    public ConsultaFrete(double peso, String cepOrigem, String cepDestino, String nomeDestinatario, double vlTotalFrete,Date dataConsulta) {
+    public ConsultaFrete() {
+    }
+
+    public ConsultaFrete(Long id, double peso, String cepOrigem, String cepDestino, String nomeDestinatario, double vlTotalFrete, Date dataPrevistaEntrega, Date dataConsulta) {
+        this.id = id;
+        this.peso = peso;
+        this.cepOrigem = cepOrigem;
+        this.cepDestino = cepDestino;
+        this.nomeDestinatario = nomeDestinatario;
+        this.vlTotalFrete = vlTotalFrete;
+        this.dataPrevistaEntrega = dataPrevistaEntrega;
+        this.dataConsulta = dataConsulta;
+    }
+
+    public ConsultaFrete(double peso, String cepOrigem, String cepDestino, String nomeDestinatario, double vlTotalFrete, Date dataConsulta) {
         this.peso = peso;
         this.cepOrigem = cepOrigem;
         this.cepDestino = cepDestino;
@@ -94,6 +110,5 @@ public class ConsultaFrete{
     public void setDataConsulta(Date dataConsulta) {
         this.dataConsulta = dataConsulta;
     }
-
 
 }
